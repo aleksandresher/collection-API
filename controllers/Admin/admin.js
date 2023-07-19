@@ -1,5 +1,5 @@
 const { User } = require("../../model/User");
-const { Collection } = require("../../model/User");
+
 const formatDate = (date) => {
   return date.toLocaleString();
 };
