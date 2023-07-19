@@ -9,7 +9,7 @@ const connectDB = async () => {
       useNewUrlParser: true,
       user: process.env.DATABASE_USERNAME,
       pass: process.env.DATABASE_PASSWORD,
-      authSource: "admin",
+      // authSource: "admin",
     });
   } catch (err) {
     console.error(err);
