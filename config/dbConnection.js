@@ -7,6 +7,10 @@ const connectDB = async () => {
     await mongoose.connect(process.env.DATABASE_URI, {
       useUnifiedTopology: true,
       useNewUrlParser: true,
+      useCreateIndex: true,
+      user: process.env.DATABASE_USERNAME,
+      pass: process.env.DATABASE_PASSWORD,
+      authSource: "admin",
     });
   } catch (err) {
     console.error(err);
