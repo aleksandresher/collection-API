@@ -48,7 +48,7 @@ app.use((error, req, res, next) => {
 
 mongoose.connection.once("open", () => {
   console.log("Connected to MongoDB");
-  const server = app.listen(8080);
+  const server = app.listen("https://usercollection.onrender.com");
   const io = require("./socket").init(server);
 
   io.on("connection", (socket) => {
